@@ -1,0 +1,480 @@
+
+/* Global styling */
+
+*,
+*::before,
+*::after {
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+}
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+/* 
+inheritance la border box pt toata lumea */
+
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+
+}
+
+p { 
+    font-size: 1.6rem;
+}
+
+
+
+
+
+section {
+    padding: 5rem 0;
+}
+
+
+/* Header styling */
+
+header {
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.container {
+    width: 100%;
+    max-width: 98rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+
+nav{
+    font-size: 25px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(44, 121, 223, 0.5);
+}
+
+
+.brand {
+    width: 2rem;
+}
+
+.menu-icons i{
+    font-size: 3.5 rem;
+    color: white;
+    cursor: pointer;
+}
+
+.close i{
+    color: rgb(27, 126, 207);
+    font-size: 3.5rem;
+}
+
+.nav-list{
+    width: 25rem;
+    height: 100vh;
+    background-color: lightgray;
+    position: fixed;
+    top:0;
+    right: -26rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: all 650ms ease-in-out;
+}
+
+
+.nav-list.active{
+    right: 0;
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+}
+
+
+.nav-item{
+    margin: 1.5rem 0;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: rgb(29, 26, 26,.7);
+}
+
+/* banner section */
+.banner{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(rgba(37, 39, 41, 0.9) 0%, rgba(35, 32, 37, 0.8) 100%), url(images/mebike.jpg) center no-repeat fixed;
+    background-size: cover;
+    position: relative;
+}
+
+.banner::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4.7rem;
+    background: url("images/longban.png") center no-repeat;
+    size: cover;
+}
+
+
+.main-message{
+    width: 100%;
+    max-width: 50rem;
+    color: white;
+    transform: translateY(20%);
+}
+
+
+.main-message h3{
+    font-size: 1.6rem;
+}
+
+.main-message h1{
+    font-family: 'Aldrich', Ubuntu;
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+
+.btn{
+    background-color: rgb(30, 148, 202);
+    border-radius: 2rem;
+    color: white;
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    transition: background-color 600ms;
+}
+
+.btn:hover{
+    background-color: rgb(133, 151, 65);
+}
+
+
+/* hobbies */
+
+.hobbies{
+    padding: 0;
+}
+
+.section-head{
+    text-align: center;
+    margin-bottom: 10rem;
+    color: rgba(0,0,0,.7);
+}
+
+.section-head h3{
+    font-size: 1.4rem;
+}
+
+.section-head h1{
+    font-family: 'Aldrich', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
+    margin: .5rem 0 1rem;
+}
+
+
+.activities-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+}
+
+
+.activities-grid-item{
+    height: 40rem;
+    padding: 5rem;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+}
+
+.activities-grid-item::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(150, 207, 75, 0.9) 0%, rgba(75, 72, 77, 0.8) 100%);
+    z-index: -1;
+}
+
+
+.mountain{
+    background: url("images/mtb.jpg") center no-repeat;
+}
+
+.gaming{
+    background: url("images/game.jpg") center no-repeat;
+}
+
+.music{
+    background: url("images/headph.jpg") center no-repeat;
+}
+
+
+.activities-grid-item i{
+    font-size: 4rem;
+    color: rgb(48, 47, 47);
+}
+
+.activities-grid-item h1{
+    font-family: 'Aldrich', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    margin: 2rem 0;
+}
+
+
+/* mission statement */
+
+.missions{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(rgba(37, 39, 41, 0.9) 0%, rgba(35, 32, 37, 0.8) 100%), url(images/fundal2.jpg) center no-repeat fixed;
+    background-size: cover;
+    position: relative;
+}
+
+
+.missions::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4.7rem;
+    background: url("images/longban-rev.png") center no-repeat;
+    background-size: cover;
+}
+
+
+.mission{
+    width: 100%;
+    color: #fafafa;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.mission-text{
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.mission-text i{
+    position: absolute;
+    top: -8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8rem;
+    color: chartreuse;
+    z-index: -1;
+}
+
+.mission-face img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 80%;
+    border: 2px solid chartreuse;
+}
+
+/* About */
+
+
+.services-section{
+    background: url(/images/fundal2.jpg);
+    background-size: cover;
+    padding: 60px 0;
+    height: auto;
+  }
+  .inner-width{
+    width: 100%;
+    height: 1000px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    overflow: hidden;
+  }
+  .section-title{
+    text-align: center;
+    color: #ddd;
+    text-transform: uppercase;
+    font-size: 30px;
+  }
+  .border{
+    width: 160px;
+    height: 2px;
+    background: chartreuse;
+    margin: 40px auto;
+  }
+  .services-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Ubuntu';
+  }
+  
+  .service-box{
+    max-width: 33.33%;
+    padding: 10px;
+    text-align: center;
+    color: #ddd;
+  }
+  
+  .service-icon{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 3px solid chartreuse;
+    border-radius: 25px;
+    color: white;
+    transform: rotate(45deg);
+    margin-bottom: 30px;
+    margin-top: 16px;
+    transition: 0.3s linear;
+  }
+  .service-icon i{
+    line-height: 70px;
+    transform: rotate(-45deg);
+    font-size: 26px;
+  }
+  .service-box:hover .service-icon{
+    background: chartreuse;
+    color: #ddd;
+  }
+  .service-title{
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .service-desc{
+    font-size: 14px;
+  }
+  
+  .about-para{
+      color: rgb(33, 143, 207);
+      margin: 10px;
+  }
+
+
+
+/* media Q */
+
+
+@media screen and (min-width: 350px){
+    .main-message{
+        transform: translateY(40%);
+    }
+}
+
+@media screen and (min-width: 700px){
+        header{
+            height: 8rem;
+        }
+
+        .nav-brand{
+            width: 3.5rem;
+        }
+
+        .nav-list{
+            width: initial;
+            height: initial;
+            background-color: transparent;
+            position: initial;
+            top: initial;
+            right: initial;
+            flex-direction: row;
+            transition: initial;
+        }
+
+        .menu-icons{
+            display: none;
+        }
+
+        .nav-item{
+            margin: 0 2.5rem;
+        }
+
+        .nav-link,
+        .current{
+            color: white;
+            position: relative;
+            font-size: 1.3rem;
+        }
+
+
+        .nav-link::before,
+        .current::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -.5rem;
+            background-color: chartreuse;
+            width: 100%;
+            height: 2px;
+            transform: scaleX(0);
+            transform-origin: left;
+            transform: transform 600ms;
+        }
+
+    .current::before{
+        transform: scaleX(1);
+    }
+
+    .nav-link:hover::before{
+        transform: scaleX(1);
+    }
+
+}
+
+@media screen and (max-width:960px) {
+    .service-box{
+      max-width: 45%;
+    }
+  }
+  
+  @media screen and (max-width:768px) {
+    .service-box{
+      max-width: 50%;
+    }
+  }
+  
+  @media screen and (max-width:480px) {
+    .service-box{
+      max-width: 100%;
+    }
+  }
