@@ -6,6 +6,7 @@
 *::after {
     margin:0;
     padding:0;
+    align-items: center;
     box-sizing: inherit;
 }
 
@@ -482,6 +483,38 @@ a:link {
     color: white;
   }
   
+/* Contact */
+
+.contact-body{
+    background-image: url(images/fundal2.jpg);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-buttons a{
+    display: inline-flex;
+    text-decoration: none;
+    font-size: 150px;
+    height: 150px;
+    width: 150px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 8px;
+}
+
+.social-buttons a:hover i{
+    background: linear-gradient(45deg, #22a6b3, chartreuse);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(2.2);
+}
+
+
 
 
 /* media Q */
