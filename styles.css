@@ -1,5 +1,5 @@
 
-/* Global styling */
+/* Global styling */ 
 
 *,
 *::before,
@@ -49,7 +49,7 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .container {
@@ -65,7 +65,7 @@ nav{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; 
     padding: 1rem 0;
     border-bottom: 1px solid rgba(44, 121, 223, 0.5);
 }
@@ -85,7 +85,6 @@ nav{
     color: rgb(27, 126, 207);
     font-size: 3.5rem;
 }
-
 .nav-list{
     width: 25rem;
     height: 100vh;
@@ -228,7 +227,7 @@ nav{
     height: 100%;
     background-image: linear-gradient(rgba(150, 207, 75, 0.9) 0%, rgba(75, 72, 77, 0.8) 100%);
     z-index: -1;
-}
+} 
 
 
 .mountain{
@@ -482,7 +481,7 @@ nav{
 a:link {
     color: white;
   }
-  
+
 /* Contact */
 
 .contact-body{
@@ -492,6 +491,10 @@ a:link {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.social-buttons{
+    text-align: center;
 }
 
 .social-buttons a{
@@ -512,6 +515,7 @@ a:link {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transform: scale(2.2);
+    z-index: 2;
 }
 
 
@@ -548,7 +552,7 @@ a:link {
 
         .menu-icons{
             display: none;
-        }
+        } 
 
         .nav-item{
             margin: 0 2.5rem;
